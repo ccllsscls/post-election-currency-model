@@ -29,7 +29,7 @@ function computeProjection(plnWeight: number, speed: number, rateCut: number) {
   const speedMult = speed === 1 ? 0.7 : speed === 2 ? 1.0 : 1.25;
   const rateMult  = rateCut === 1 ? 1.05 : rateCut === 2 ? 1.0 : 0.93;
   const hufBase   = HUF_ACTUAL[0].value;
-  return PLN_DATA.map((d, i) => {
+  return PLN_DATA.map((d) => {
     const plnChange = (d.value - PLN_DATA[0].value) / PLN_DATA[0].value;
     const blended   = plnChange * speedMult * rateMult * plnWeight
                     + plnChange * 0.5 * (1 - plnWeight);
