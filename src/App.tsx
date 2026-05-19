@@ -1,3 +1,4 @@
+import CurrencyChart from "./components/CurrencyChart";
 import { useState } from "react";
 import AiDevPanel from "./components/AiDevPanel";
 
@@ -30,7 +31,7 @@ export default function App() {
         </div>
       </div>
       <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 1.5rem" }}>
-        {active === "analysis" && <p style={{ color: "#888", padding: "2rem 0" }}>Chart coming soon.</p>}
+        {active === "analysis" && <CurrencyChart />}
         {active === "how-built" && <AiDevPanel />}
       </div>
     </div>
